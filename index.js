@@ -24,7 +24,7 @@ exports.handler = async (data, context) => {
     //     };
     // }
 
-    const { data: d } = await axios.get("https://www.africau.edu/images/default/sample.pdf");
+    const { data: d } = await axios.get(data.pdf);
     const encryptedPdf = await context.encrypt(d);
 
     return {
