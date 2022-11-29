@@ -1,0 +1,4 @@
+[function]
+name = "hello-function"
+language = "node@16"
+handler = "index.handler"
