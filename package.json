@@ -22,5 +22,9 @@
     "bugs": {
         "url": "https://github.com/evervault/hello-function/issues"
     },
-    "homepage": "https://github.com/evervault/hello-function#readme"
+    "homepage": "https://github.com/evervault/hello-function#readme",
+    "dependencies": {
+        "axios": "^1.2.0",
+        "base64-stream": "^1.0.0"
+    }
 }
