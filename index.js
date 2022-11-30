@@ -19,8 +19,9 @@ exports.handler = async (data, context) => {
 
     let customisedSvg = "";
     for (const key in data) {
-        customisedSvg = svg.replaceAll(`{${key}}`, data[key]).replace(/\{.*?[^\}]\}/g, '');;
+        customisedSvg = svg.replaceAll(`{${key}}`, data[key]);
     }
+    customisedSvg = customisedSvg.replace(/\{.*?[^\}]\}/g, '');
 
     doc.image('tm.png', 0, 0, {
         fit: [1239, 1752]
