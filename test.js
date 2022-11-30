@@ -2,7 +2,7 @@ var fs = require('fs');
 const PDFDocument = require('pdfkit');
 const sharp = require('sharp');
 
-function stream2buffer(stream) {
+const stream2buffer = (stream) => {
 
     return new Promise((resolve, reject) => {
 

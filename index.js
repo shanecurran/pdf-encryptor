@@ -4,6 +4,16 @@ const svg = require('fs').readFileSync('tmtemplate.svg').toString();
 const PDFDocument = require('pdfkit');
 const sharp = require('sharp');
 
+const stream2buffer = (stream) => {
+    return new Promise((resolve, reject) => {
+        const _buf = [];
+
+        stream.on("data", (chunk) => _buf.push(chunk));
+        stream.on("end", () => resolve(Buffer.concat(_buf)));
+        stream.on("error", (err) => reject(err));
+    });
+};
+
 exports.handler = async (data, context) => {
     const doc = new PDFDocument({ size: [1239, 1752], margin: 0, userPassword: data.password || "password" });
 
@@ -35,6 +45,6 @@ exports.handler = async (data, context) => {
 
     return {
         encryptedPdf: uploaded,
-        name: data.name
+        password: context.encrypt(data.password || "password")
     };
 };
