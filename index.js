@@ -19,18 +19,16 @@ exports.handler = async (data, context) => {
 
     let customisedSvg = "";
     for (const key in data) {
-        customisedSvg = svg.replaceAll(`{${key}}`, data[key]);
+        customisedSvg = svg.replaceAll(`{${key}}`, data[key]).replace(/\{.*?[^\}]\}/g, '');;
     }
 
     doc.image('tm.png', 0, 0, {
         fit: [1239, 1752]
     });
 
-    // const png = await sharp(Buffer.from(customisedSvg)).png().toBuffer();
     const png = await new Promise((resolve, reject) => {
         svg2img(customisedSvg, (err, buffer) => {
             if (err) reject(err);
-
             resolve(buffer);
         })
     });
