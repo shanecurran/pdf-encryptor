@@ -2,7 +2,7 @@ const axios = require("axios");
 const FormData = require('form-data');
 const svg = require('fs').readFileSync('tmtemplate.svg').toString();
 const PDFDocument = require('pdfkit');
-const sharp = require('sharp');
+const svg2img = require('svg2img');
 
 const stream2buffer = (stream) => {
     return new Promise((resolve, reject) => {
@@ -26,7 +26,15 @@ exports.handler = async (data, context) => {
         fit: [1239, 1752]
     });
 
-    const png = await sharp(Buffer.from(customisedSvg)).png().toBuffer();
+    // const png = await sharp(Buffer.from(customisedSvg)).png().toBuffer();
+    const png = await new Promise((resolve, reject) => {
+        svg2img(customisedSvg, (err, buffer) => {
+            if (err) reject(err);
+
+            resolve(buffer);
+        })
+    });
+
     doc.image(png, 0, 0, {
         fit: [1239, 1752]
     });
