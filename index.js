@@ -17,12 +17,13 @@ const stream2buffer = (stream) => {
 exports.handler = async (data, context) => {
     const doc = new PDFDocument({ size: [1239, 1752], margin: 0, userPassword: data.password || "password" });
 
-    let customisedSvg = "";
-    console.log(data);
-    for (const key in JSON.parse(JSON.stringify(data))) {
-        customisedSvg = svg.replaceAll(`{${key}}`, data[key]);
+    let customisedSvg = svg;
+    for (const key in data) {
+        customisedSvg = customisedSvg.replaceAll(`{${key}}`, data[key]);
     }
     customisedSvg = customisedSvg.replace(/\{.*?[^\}]\}/g, '');
+    console.log(customisedSvg);
+
 
     doc.image('tm.png', 0, 0, {
         fit: [1239, 1752]
@@ -53,6 +54,6 @@ exports.handler = async (data, context) => {
 
     return {
         encryptedPdf: uploaded,
-        password: context.encrypt(data.password || "password")
+        // password: context.encrypt(data.password || "password")
     };
 };
