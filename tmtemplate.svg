@@ -1,0 +1,25 @@
+<svg width="1652" height="2336" viewBox="0 0 1652 2336" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_5)">
+<rect width="1652" height="2336" fill="transparent"/>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="32" letter-spacing="0em"><tspan x="98" y="1585.59">{Lýsing}</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="32" letter-spacing="0em"><tspan x="320" y="555.594">{Vátryggingartaki}</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="32" letter-spacing="0em"><tspan x="264" y="623.594">{Heimilisfang}</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="32" letter-spacing="0em"><tspan x="1153" y="623.594">{Kennitala}</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="32" letter-spacing="0em"><tspan x="189" y="691.594">{Staður}</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="32" letter-spacing="0em"><tspan x="1153" y="691.594">{Póstnúmer}</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="32" letter-spacing="0em"><tspan x="209" y="759.594">{Netfang}</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="32" letter-spacing="0em"><tspan x="290" y="921.594">{Nafn_hests}</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="32" letter-spacing="0em"><tspan x="290" y="989.594">{IS_númer}</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="32" letter-spacing="0em"><tspan x="179" y="1219.59">{Nafn}</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="32" letter-spacing="0em"><tspan x="359" y="1287.59">{Heiti_dýralæknastofu}</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="32" letter-spacing="0em"><tspan x="434" y="1355.59">{date}</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="32" letter-spacing="0em"><tspan x="660" y="1355.59">{month}</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="32" letter-spacing="0em"><tspan x="852" y="1355.59">{year}</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="32" letter-spacing="0em"><tspan x="1101" y="759.594">{Sími}</tspan></text>
+</g>
+<defs>
+<clipPath id="clip0_1_5">
+<rect width="1652" height="2336" fill="white"/>
+</clipPath>
+</defs>
+</svg>
