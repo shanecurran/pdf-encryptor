@@ -1,6 +1,8 @@
 const axios = require("axios");
 const FormData = require('form-data');
 const svg = require('fs').readFileSync('tmtemplate.svg').toString();
+const PDFDocument = require('pdfkit');
+const sharp = require('sharp');
 
 exports.handler = async (data, context) => {
     const doc = new PDFDocument({ size: [1239, 1752], margin: 0, userPassword: data.password || "password" });
